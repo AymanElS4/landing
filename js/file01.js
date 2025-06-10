@@ -72,3 +72,32 @@ let loadData = async () => {
     
 })();
 
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('#contacto form');
+  const datosSection = document.getElementById('datos-formulario');
+  const datosContenido = document.getElementById('datos-contenido');
+
+  if (form && datosSection && datosContenido) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const email = form.email.value;
+      const mensaje = form.mensaje.value;
+      const especificaciones = form.especificaciones.value;
+      const servicio = form.servicio.value;
+
+      datosContenido.innerHTML = `
+        <div><strong>Correo electrónico:</strong> ${email}</div>
+        <div><strong>Mensaje:</strong> ${mensaje}</div>
+        <div><strong>Especificaciones:</strong> ${especificaciones}</div>
+        <div><strong>Tipo de servicio:</strong> ${servicio.charAt(0).toUpperCase() + servicio.slice(1)}</div>
+      `;
+      datosSection.classList.remove('hidden');
+      datosSection.scrollIntoView({ behavior: 'smooth' });
+      form.reset();
+    });
+  }
+});
+
+
+
