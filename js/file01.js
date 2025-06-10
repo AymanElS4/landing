@@ -2,17 +2,9 @@
 
 import { fetchFakerData } from './functions.js';
 
-(() => {
-    alert("¡Bienvenido a la página!");
-    console.log("Mensaje de bienvenida mostrado.");
-})();
 
-const showtoast = () => {
-    const toast = document.getElementById("toast-interactive");
-    if (toast){
-        toast.classList.add("md:block");
-    }
-}
+
+
 const showVideo = () => {
     const demo = document.getElementById("demo");
     if (demo) {
