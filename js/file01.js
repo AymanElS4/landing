@@ -1,5 +1,6 @@
 "use strict";
 import { fetchFakerData } from './functions.js';
+import { saveVote, getVotes } from './firebase.js'; // Importar getVotes
 
 (() => {
     alert("¡Bienvenido a la página!");
@@ -21,6 +22,50 @@ const showVideo = () => {
     }
     
 }
+
+// Definir la función displayVotes
+const displayVotes = async () => {
+    const results = document.getElementById('results');
+    if (!results) return;
+
+    const votes = await getVotes();
+    // Contar votos por producto
+    const voteCounts = {};
+    votes.forEach(vote => {
+        if (vote.productID in voteCounts) {
+            voteCounts[vote.productID]++;
+        } else {
+            voteCounts[vote.productID] = 1;
+        }
+    });
+
+    // Crear tabla
+    let table = `<table class="min-w-full text-left text-sm">
+        <thead><tr><th class="px-4 py-2">Producto</th><th class="px-4 py-2">Total de votos</th></tr></thead>
+        <tbody>`;
+    Object.entries(voteCounts).forEach(([product, count]) => {
+        table += `<tr><td class="border px-4 py-2">${product}</td><td class="border px-4 py-2">${count}</td></tr>`;
+    });
+    table += `</tbody></table>`;
+
+    results.innerHTML = table;
+};
+
+const enableForm = () => {
+    const form = document.getElementById('form_voting');
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const input = document.getElementById('select_product');
+            if (input) {
+                const value = input.value;
+                await saveVote(value);
+                form.reset();
+                await displayVotes(); // Mostrar votos después de guardar
+            }
+        });
+    }
+};
 
 const loadData = async () => {
 
@@ -67,4 +112,6 @@ const renderData = (data) => {
     showtoast();
     showVideo();
     loadData();
+    enableForm(); // Invocar la función enableForm
+    displayVotes(); // Invocar la función displayVotes al cargar
 })();
