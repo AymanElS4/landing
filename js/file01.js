@@ -1,6 +1,8 @@
 "use strict";
 
 import { fetchFakerData } from './functions.js';
+import { saveVote } from './firebase.js';
+import { getVotes } from './firebase.js';
 
 
 
@@ -15,10 +17,84 @@ const showVideo = () => {
     
 }
 
+const displayVotes = async () => {
+    const resultsContainer = document.getElementById('results');
+    if (!resultsContainer) return;
+
+    // Obtener los votos usando la función getVotes
+    const result = await getVotes();
+
+    if (!result.success || !result.body) {
+        resultsContainer.innerHTML = "<p class='text-red-600'>No se pudieron cargar los votos.</p>";
+        return;
+    }
+
+    // Contar votos por producto
+    const votos = result.body;
+    const conteo = {};
+
+    Object.values(votos).forEach(voto => {
+        if (voto.productID) {
+            conteo[voto.productID] = (conteo[voto.productID] || 0) + 1;
+        }
+    });
+
+    // Crear la tabla
+    let tabla = `
+        <table class="min-w-full bg-white border border-gray-300 rounded-lg">
+            <thead>
+                <tr>
+                    <th class="py-2 px-4 border-b">Producto</th>
+                    <th class="py-2 px-4 border-b">Total de votos</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+
+    Object.entries(conteo).forEach(([producto, total]) => {
+        tabla += `
+            <tr>
+                <td class="py-2 px-4 border-b">${producto}</td>
+                <td class="py-2 px-4 border-b text-center">${total}</td>
+            </tr>
+        `;
+    });
+
+    tabla += `
+            </tbody>
+        </table>
+    `;
+
+    resultsContainer.innerHTML = tabla;
+};
+
+const enableForm = () => {
+    const form = document.getElementById('form_voting');
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const select = document.getElementById('select_product');
+        if (!select) return;
+
+        const productID = select.value;
+
+        await saveVote(productID);
+
+        // Limpia el formulario
+        form.reset();
+
+        // Mostrar los votos actualizados
+        displayVotes();
+    });
+};
+
+// Invoca las funciones en la autoejecución
 (() => {
-    showtoast();
     showVideo();
-    
+    enableForm();
+    displayVotes();
 })();
 let renderCards = (data) => {
     const container = document.getElementById("skeleton-container");

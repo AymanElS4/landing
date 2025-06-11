@@ -76,10 +76,9 @@
             <div id="container-02" class="mt-8 flex justify-left gap-4">
               <button id="start"
                 onclick="document.getElementById('contactanos').scrollIntoView({ behavior: 'smooth' });"
-                class="inline-block px-6 py-3 text-white bg-blue-600 rounded-lg border border-gray-300">Agende un
+                class="inline-block px-6 py-3 text-white bg-blue-400 rounded-lg  ">Agende un
                 encargo</button>
-              <button id="demo"
-                class="inline-block px-6 py-3 border border-gray-300 text-white rounded-lg dark:border-gray-600 dark:text-white">Testimonios</button>
+              
             </div>
           </div>
         </div>
@@ -153,7 +152,7 @@
         </div>
       </div>
     </section>
-
+  
     <section
       class="relative bg-blue-teal-gradient px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left "
       id="contactanos">
@@ -184,7 +183,7 @@
             <option value="manana" class="block text-blue-700 font-semibold mb-2">Mañana (8:00 - 12:00)</option>
             <option value="tarde" class="block text-blue-700 font-semibold mb-2">Tarde (14:00 - 18:00)</option>
           </select>
-
+          <!--hay un error en el id-->
           <label for="servicios" class="block text-blue-700 font-semibold mb-2">Servicios</label>
           <div class=" border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4">
             <div class="flex items-center w-full px-4 py-2 mb-4">
@@ -201,7 +200,7 @@
                 de coronas</label>
             </div>
             <div class="flex items-center w-full px-4 py-2  mb-4">
-              <input checked id="checked-checkbox" type="checkbox" value=""
+              <input checked id="unchecked-checkbox" type="checkbox" value=""
                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
               <label for="checked-checkbox"
                 class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Creación/reparación de
@@ -213,12 +212,14 @@
         </form>
       </div>
     </section>
+   
+    <!-- Sección para mostrar los datos ingresados- eliminar si quiere -->
     <section id="datos-formulario" class="max-w-2xl mx-auto my-12 bg-[#F8F9FA] rounded-2xl shadow-lg p-8 hidden">
       <h2 class="text-xl font-bold mb-4 text-blue-700">Datos ingresados</h2>
       <div id="datos-contenido" class="space-y-2 text-gray-700"></div>
     </section>
 
-
+    <!-- Sección de voto hecho en clases -->
     <section class="flex flex-col items-center justify-center bg-white py-8">
       <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Vota por tu producto preferido</h2>
@@ -244,29 +245,30 @@
         </div>
       </div>
     </section>
-
+     <!-- Termina act de clase -->
 
     <footer class="relative bg-gray-500 text-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 lg:py-24">
 
       <div class="flex flex-col md:flex-row">
         <div class="w-full lg:w-2/6 lg:mx-4 lg:pr-8">
-          <h3 class="font-bold text-2xl">DentalPro</h3>
-          <p class="text-gray-400">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+          <h3 class="font-bold text-2xl">Laboratorio CeramicaDent</h3>
+          
 
 
         </div>
 
         <div class="w-full lg:w-1/6 mt-8 lg:mt-0 lg:mx-4">
-          <h5 class="uppercase tracking-wider font-semibold text-white">Treatments</h5>
+          <h5 class="uppercase tracking-wider font-semibold text-white">Servicios</h5>
           <ul class="mt-4">
-            <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">General Dentistry</a></li>
-            <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Cosmetic Dentistry</a></li>
-            <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Oral Health</a></li>
+            <li class="mt-2"><a  title="" class="opacity-75 hover:opacity-100">Reparación de Puentes</a></li>
+            <li class="mt-2"><a title="" class="opacity-75 hover:opacity-100">Reparación de Prótesis</a></li>
+            <li class="mt-2"><a  title="" class="opacity-75 hover:opacity-100">Reparación de Coronas</a></li>
+            <li class="mt-2"><a  title="" class="opacity-75 hover:opacity-100">Creación de Prótesis</a></li>
           </ul>
         </div>
 
         <div class="w-full lg:w-2/6 mt-8 lg:mt-0 lg:mx-4 lg:pr-8">
-          <h5 class="uppercase tracking-wider font-semibold text-white" id="contacto">Contact Details</h5>
+          <h5 class="uppercase tracking-wider font-semibold text-white" id="contacto">Detalles de contacto</h5>
           <ul class="mt-4">
             <li>
               <a href="#" title="" class="block flex items-center opacity-75 hover:opacity-100">
@@ -293,8 +295,8 @@
                   </svg>
                 </span>
                 <span class="ml-3">
-                  Mon - Fri: 9:00 - 19:00<br>
-                  Closed on Weekends
+                  Lunes - Viernes: 8:00 - 18:00<br>
+                  Cerrado en fines de semana
                 </span>
               </a>
             </li>
@@ -308,7 +310,7 @@
                   </svg>
                 </span>
                 <span class="ml-3">
-                  +1 562-789-1935
+                  +593 562-789-1935
                 </span>
               </a>
             </li>
@@ -322,7 +324,7 @@
                   </svg>
                 </span>
                 <span class="ml-3">
-                  dentalpro@example.com
+                  laboratorioDent@gmail.com
                 </span>
               </a>
             </li>
@@ -330,7 +332,7 @@
         </div>
 
         <div class="w-full lg:w-1/6 mt-8 lg:mt-0 lg:mx-4">
-          <p class="text-sm text-gray-400 mt-12">© 2018 ProDentists. <br class="hidden lg:block">All Rights Reserved.
+          <p class="text-sm text-gray-400 mt-12">© 2025 Laboratorio CeramicaDent. <br class="hidden lg:block">All Rights Reserved.
           </p>
         </div>
       </div>
