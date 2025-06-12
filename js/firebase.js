@@ -20,7 +20,7 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 // Función para guardar un voto
-export const saveVote = (productID) => {
+const saveVote = (productID) => {
   const votesRef = ref(database, 'votes');
   const newVoteRef = push(votesRef);
   const voteData = {
@@ -40,7 +40,7 @@ export const saveVote = (productID) => {
 };
 
 // Función para obtener los votos
-export const getVotes = async () => {
+const getVotes = async () => {
   const votesRef = ref(database, 'votes');
   try {
     const snapshot = await get(votesRef);
@@ -63,3 +63,52 @@ export const getVotes = async () => {
   }
 };
 
+// Función para guardar una reserva
+const saveReserva = (reservaData) => {
+  const reservasRef = ref(database, 'reservas');
+  const newReservaRef = push(reservasRef);
+
+  return set(newReservaRef, {
+    ...reservaData,
+    date: new Date().toISOString()
+  })
+    .then(() => ({
+      success: true,
+      message: "Reserva guardada correctamente."
+    }))
+    .catch((error) => ({
+      success: false,
+      message: `Error al guardar la reserva: ${error.message}`
+    }));
+};
+
+// Función para obtener las reservas
+const getReserva = async () => {
+  const reservasRef = ref(database, 'reservas');
+  try {
+    const snapshot = await get(reservasRef);
+    if (snapshot.exists()) {
+      return {
+        success: true,
+        body: snapshot.val()
+      };
+    } else {
+      return {
+        success: true,
+        body: {}
+      };
+    }
+  } catch (error) {
+    return {
+      success: false,
+      message: `Error al obtener las reservas: ${error.message}`
+    };
+  }
+};
+
+export {
+  saveVote,
+  getVotes,
+  saveReserva,
+  getReserva
+}
