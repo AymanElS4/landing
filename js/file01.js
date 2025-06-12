@@ -205,7 +205,7 @@ let loadData = async () => {
     
 })();
 
-/*
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#contacto form');
   const datosSection = document.getElementById('datos-formulario');
@@ -232,6 +232,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-*/
+
+// Mostrar estado de contacto (abierto/cerrado) usando la API de timeapi.io
+document.addEventListener('DOMContentLoaded', async () => {
+  const estadoEl = document.getElementById('estado-laboratorio');
+  if (!estadoEl) return;
+
+  try {
+    // Usamos la API de timeapi.io para obtener la hora de Santiago, Chile
+    const resp = await fetch('https://timeapi.io/api/Time/current/zone?timeZone=America/Santiago');
+    const data = await resp.json();
+    const hora = data.hour; // La API devuelve la hora directamente
+
+    // Laboratorio abierto de 8:00 a 18:00
+    if (hora >= 8 && hora < 18) {
+      estadoEl.textContent = "¡Estamos Abiertos!";
+      estadoEl.className = "text-blue-600 font-semibold";
+    } else {
+      estadoEl.textContent = "Cerrado en este momento";
+      estadoEl.className = "text-red-600 font-semibold";
+    }
+  } catch (error) {
+    estadoEl.textContent = "No se pudo obtener el estado actual.";
+    estadoEl.className = "text-red-600 font-semibold";
+  }
+});
 
 
