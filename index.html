@@ -1,61 +1,97 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-  
-   <main class="bg-slate-50 dark:bg-gray-900" >
-    
 
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-    </a>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-        <li>
-          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-      <div id="container-01" class="mx-auto px-4 py-20 text-center">
-         <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Tu presencia digital comienza aquí</h1>
-         <p class="mt-6 text-lg leading-relaxed text-gray-600 max-w-2xl mx-auto dark:text-gray-300">Creamos experiencias web atractivas y rápidas con Tailwind CSS 4.1. Dale vida a tus ideas con un diseño moderno y responsivo.</p>
-         <div id="container-02" class="mt-8 flex justify-center gap-4">
-            <button id="start" class="inline-block px-6 py-3 text-white bg-blue-600 rounded-lg">Comenzar</button>
-            <button id="demo" class="inline-block px-6 py-3 border border-gray-300 text-gray-700 rounded-lg dark:border-gray-600 dark:text-white">Ver demo</button>
-         </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+
+  <main class="bg-slate-50 dark:bg-gray-900">
+
+
+    <nav class="bg-white border-b border-gray-200 fixed w-full z-30 top-0 left-0 shadow-sm dark:bg-gray-900">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./imagenes/dientelogo-removebg-preview.png" class="h-8" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Laboratorio
+            CeramicaDent</span>
+        </a>
+        <button data-collapse-toggle="navbar-scroll" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-scroll" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-scroll">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <a href="#home"
+                class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0 dark:text-white hover:text-blue-700">Inicio</a>
+            </li>
+            <li>
+              <a href="#servicios"
+                class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0 dark:text-white hover:text-blue-700">Servicios</a>
+            </li>
+
+            <li>
+              <a href="#nosotros"
+                class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0 dark:text-white hover:text-blue-700">Nosotros</a>
+            </li>
+            <li>
+              <a href="#contacto"
+                class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0 dark:text-white hover:text-blue-700">Contacto</a>
+            </li>
+          </ul>
+        </div>
       </div>
-   <section class="bg-white dark:bg-gray-900">
+    </nav>
+    <div class="bg-gray-100">
+      <!-- HOME/HEADER mantiene su fondo original -->
+      <section id="home" class="cover bg-blue-teal-gradient relative bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 overflow-hidden py-48 flex
+      items-center min-h-screen rounded-br-[128px]">
+        <div class="h-full absolute top-0 left-0 z-0">
+          <img src="imagenes/cover-bg.jpg" alt="" class="w-full h-full object-cover lg:object-auto opacity-20">
+        </div>
+
+        <div class="lg:w-3/4 xl:w-2/4 relative z-10 h-100 lg:mt-16">
+          <div>
+            <h1 class="text-white text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">Dale una nueva sonrisa
+              a tu
+              paciente.</h1>
+            <p class="text-blue-100 text-xl md:text-2xl leading-snug mt-4">Bienvenido a laboratorios
+              CeramicaDent,
+              donde
+              puedes
+              encontrar nuevos dientes.</p>
+            <div id="container-02" class="mt-8 flex justify-left gap-4">
+              <button id="start"
+                onclick="document.getElementById('contactanos').scrollIntoView({ behavior: 'smooth' });"
+                class="inline-block px-6 py-3 text-white bg-blue-400 rounded-lg  ">Agende un
+                encargo</button>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="container-01" class="mx-auto px-4 py-20 text-center">
+      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Sus dientes nuevos están aquí
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-gray-600 max-w-2xl mx-auto dark:text-gray-300">Creamos dientes
+        perfectos, para que vuelvas a sonreir. Dale un nuevo aspecto a tu vida con nuestros dientes.</p>
+
+    </div>
+    <!--<section class="bg-white dark:bg-gray-900">
      <div id="container-03" class="px-4 py-8 mx-auto max-w-md md:max-w-xl">
          <div id="container-04" class="grid grid-cols-2 gap-4 md:grid-cols-4">
              <img src="https://placehold.co/50" alt="Imagen 1" class="w-full h-auto rounded">
@@ -64,46 +100,251 @@
              <img src="https://placehold.co/50" alt="Imagen 4" class="w-full h-auto rounded">
          </div>
      </div>
-   </section>
-    
+   </section>-->
+    <!-- Cambia el fondo de las siguientes secciones -->
+    <section id="servicios" class="relative px-4 py-16 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 lg:py-32 bg-[#F8F9FA]">
+      <div class="lg:px-8 mt-12 lg:mt-0">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <div class="bg-white rounded-lg border border-gray-300 p-8 text-center">
+            <img src="images/oral-surgery.svg" alt="" class="h-20 mx-auto">
+            <h4 class="text-xl font-bold mt-4">Reparación de Puentes</h4>
+            
 
-     <div id="toast-interactive"
-         class="fixed right-5 bottom-5 flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow-sm dark:text-gray-400 dark:divide-gray-700 dark:bg-gray-800 hidden"
-         role="alert">
-         <div class="flex">
+          </div>
+          <div class="bg-white rounded-lg border border-gray-300 p-8 text-center">
+            <img src="images/painless-dentistry.svg" alt="" class="h-20 mx-auto">
+            <h4 class="text-xl font-bold mt-4">Reparación de Prótesis</h4>
+            
 
-             <!-- Content -->
-             <div class="ms-3 text-sm font-normal">
-                 <span class="mb-1 text-sm font-semibold text-gray-900 dark:text-white">Suscríbete ahora</span>
-                 <div class="mb-2">Suscríbete ahora para obtener beneficios de cliente premium y pro.</div>
-                 <div class="grid grid-cols-2 gap-2">
-                 <div>
-                     <a href="#"
-                     class="inline-flex justify-center w-full px-2 py-1.5 text-xs font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">Sí, quiero</a>
-                 </div>
-                 <div>
-                     <a href="#"
-                     class="inline-flex justify-center w-full px-2 py-1.5 text-xs font-medium text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">No ahora</a>
-                 </div>
-                 </div>
-             </div>
+          </div>
+          <div class="bg-white rounded-lg border border-gray-300 p-8 text-center">
+            <img src="images/periodontics.svg" alt="" class="h-20 mx-auto">
+            <h4 class="text-xl font-bold mt-4">Reparación de Coronas</h4>
+            
 
-             <!-- Close button -->
-             <button type="button"
-                 class="ms-auto -mx-1.5 -my-1.5 p-1.5 inline-flex items-center justify-center w-8 h-8 text-gray-400 bg-white rounded-lg hover:text-gray-900 hover:bg-gray-100 focus:ring-2 focus:ring-gray-300 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
-                 data-dismiss-target="#toast-interactive" aria-label="Close">
-                 <span class="sr-only">Close</span>
-                 <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" aria-hidden="true">
-                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                     d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                 </svg>
-             </button>
-         </div>
-     </div>
+          </div>
+          <div class="bg-white rounded-lg border border-gray-300 p-8 text-center">
+            <img src="images/oral-surgery.svg" alt="" class="h-20 mx-auto">
+            <h4 class="text-xl font-bold mt-4">Creación de Prótesis</h4>
+            
+
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-   </main>
-   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-   <script type="module" src="/js/file01.js"></script>
-  </body>
+
+    <section class="relative bg-gray-100 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-16 lg:py-32" id="nosotros">
+      <div class="flex flex-col lg:flex-row lg:-mx-8">
+        <div class="w-full lg:w-1/2 lg:px-8">
+          <h2 class="text-3xl leading-tight font-bold mt-4">Laboratorios CeramicaDent</h2>
+          <p class="mt-2 leading-relaxed">Somos un laboratorio de técnicos dentales comprometidos con preoveer un excelente servicio y producto a nuestros clientes, ofreciendo prótesis de calidad y varios servicios relacioandos que ayuden al bienesta de los pacientes.</p>
+        </div>
+
+        <div class="w-full md:max-w-md md:mx-auto lg:w-1/2 lg:px-8 mt-12 mt:md-0">
+          <div class="bg-gray-400 w-full h-72 rounded-lg">
+            <img src="./imagenes/imagen-laboratorio.jpg" alt="Imagen de ejemplo"
+              class="w-full h-full object-cover rounded-lg">
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+  
+    <section
+      class="relative bg-blue-teal-gradient px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left "
+      id="contactanos">
+      <h2 class="text-2xl font-bold text-center text-black dark:text-white mb-8">Contáctanos!</h2>
+      <div class="w-full md:w-1/2 mx-auto bg-white rounded-2xl shadow-lg p-8">
+        <form id="form_reserva">
+          <div class="mb-4">
+            <label for="email" class="block text-blue-700 font-semibold mb-2">Correo electrónico</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-2 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="tu@email.com">
+          </div>
+          <div class="mb-4">
+            <label for="mensaje" class="block text-blue-700 font-semibold mb-2">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="3" required
+              class="w-full px-4 py-2 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="Escribe tu mensaje aquí"></textarea>
+          </div>
+          <div class="mb-4">
+            <label for="especificaciones" class="block text-blue-700 font-semibold mb-2">Especificaciones</label>
+            <input type="text" id="especificaciones" name="especificaciones" required
+              class="w-full px-4 py-2 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="Detalles adicionales">
+          </div>
+          <label for="horario" class="block text-blue-700 font-semibold mb-2">Horario preferido:</label>
+          <select name="horario" id="horario"
+            class="w-full px-4 py-2 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4">
+            <option value="Manana" selected>Mañana (8:00 - 12:00)</option>
+            <option value="Tarde">Tarde (14:00 - 18:00)</option>
+          </select>
+          <!--hay un error en el id-->
+          <label for="servicios" class="block text-blue-700 font-semibold mb-2">Servicios</label>
+          <div class=" border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4">
+            <div class="flex items-center w-full px-4 py-2 mb-4">
+
+              <input id="puentes-checkbox" type="checkbox" value="puentes"
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="puentes-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Creación
+                de puentes</label>
+            </div>
+            <div class="flex items-center w-full px-4 py-2 mb-4">
+              <input id="coronas-checkbox" type="checkbox" value="coronas"
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="coronas-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Creación
+                de coronas</label>
+            </div>
+            <div class="flex items-center w-full px-4 py-2  mb-4">
+              <input id="protesis-checkbox" type="checkbox" value="protesis"
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="protesis-checkbox"
+                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Creación/reparación de
+                prótesis</label>
+            </div>
+          </div>
+          <button type="submit"
+            class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition duration-200">Enviar</button>
+        </form>
+      </div>
+    </section>
+   
+    <!-- Sección para mostrar los datos ingresados- eliminar si quiere -->
+    <section id="datos-formulario" class="max-w-2xl mx-auto my-12 bg-[#F8F9FA] rounded-2xl shadow-lg p-8 hidden">
+      <h2 class="text-xl font-bold mb-4 text-blue-700">Datos ingresados</h2>
+      <div id="datos-contenido" class="space-y-2 text-gray-700"></div>
+    </section>
+
+    <!-- Sección de voto hecho en clases -->
+    <section class="flex flex-col items-center justify-center bg-white py-8">
+      <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Vota por tu producto preferido</h2>
+
+        <div class="mb-6">
+          <form id="form_voting" class="relative flex items-center">
+            <select id="select_product"
+              class="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <option value="" disabled selected>Seleccione un producto</option>
+              <option value="product1">Producto 1</option>
+              <option value="product2">Producto 2</option>
+              <option value="product3">Producto 3</option>
+            </select>
+            <button
+              class="ml-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+              VOTAR
+            </button>
+          </form>
+        </div>
+
+        <div id="results" class="border border-gray-300 rounded-lg h-52 w-full p-2 bg-gray-50">
+          <p class="text-gray-500 text-center mt-16">Resultado de la votación</p>
+        </div>
+      </div>
+    </section>
+     <!-- Termina act de clase -->
+
+    <footer class="relative bg-gray-500 text-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 lg:py-24">
+
+      <div class="flex flex-col md:flex-row">
+        <div class="w-full lg:w-2/6 lg:mx-4 lg:pr-8">
+          <h3 class="font-bold text-2xl">Laboratorio CeramicaDent</h3>
+          
+
+
+        </div>
+
+        <div class="w-full lg:w-1/6 mt-8 lg:mt-0 lg:mx-4">
+          <h5 class="uppercase tracking-wider font-semibold text-white">Servicios</h5>
+          <ul class="mt-4">
+            <li class="mt-2"><a  title="" class="opacity-75 hover:opacity-100">Reparación de Puentes</a></li>
+            <li class="mt-2"><a title="" class="opacity-75 hover:opacity-100">Reparación de Prótesis</a></li>
+            <li class="mt-2"><a  title="" class="opacity-75 hover:opacity-100">Reparación de Coronas</a></li>
+            <li class="mt-2"><a  title="" class="opacity-75 hover:opacity-100">Creación de Prótesis</a></li>
+          </ul>
+        </div>
+
+        <div class="w-full lg:w-2/6 mt-8 lg:mt-0 lg:mx-4 lg:pr-8">
+          <h5 class="uppercase tracking-wider font-semibold text-white" id="contacto">Detalles de contacto</h5>
+          <ul class="mt-4">
+            <li>
+              <a href="#" title="" class="block flex items-center opacity-75 hover:opacity-100">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    class="fill-current">
+                    <path
+                      d="M12,2C7.589,2,4,5.589,4,9.995C3.971,16.44,11.696,21.784,12,22c0,0,8.029-5.56,8-12C20,5.589,16.411,2,12,2z M12,14 c-2.21,0-4-1.79-4-4s1.79-4,4-4s4,1.79,4,4S14.21,14,12,14z" />
+                  </svg>
+                </span>
+                <span class="ml-3">
+                  Ficus, Guayaquil, Ecuador
+                </span>
+              </a>
+            </li>
+            <li class="mt-4">
+              <a href="#" title="" class="block flex items-center opacity-75 hover:opacity-100">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    class="fill-current">
+                    <path
+                      d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10c5.514,0,10-4.486,10-10S17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8 s3.589-8,8-8s8,3.589,8,8S16.411,20,12,20z" />
+                    <path d="M13 7L11 7 11 13 17 13 17 11 13 11z" />
+                  </svg>
+                </span>
+                <span class="ml-3">
+                  Lunes - Viernes: 8:00 - 18:00<br>
+                  Cerrado en fines de semana
+                </span>
+              </a>
+            </li>
+            <li class="mt-4">
+              <a href="#" title="" class="block flex items-center opacity-75 hover:opacity-100">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    class="fill-current">
+                    <path
+                      d="M14.594,13.994l-1.66,1.66c-0.577-0.109-1.734-0.471-2.926-1.66c-1.193-1.193-1.553-2.354-1.661-2.926l1.661-1.66 l0.701-0.701L5.295,3.293L4.594,3.994l-1,1C3.42,5.168,3.316,5.398,3.303,5.643c-0.015,0.25-0.302,6.172,4.291,10.766 C11.6,20.414,16.618,20.707,18,20.707c0.202,0,0.326-0.006,0.358-0.008c0.245-0.014,0.476-0.117,0.649-0.291l1-1l0.697-0.697 l-5.414-5.414L14.594,13.994z" />
+                  </svg>
+                </span>
+                <span class="ml-3">
+                  +593 562-789-1935
+                </span>
+              </a>
+            </li>
+            <li class="mt-4">
+              <a href="#" title="" class="block flex items-center opacity-75 hover:opacity-100">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    class="fill-current">
+                    <path
+                      d="M20,4H4C2.896,4,2,4.896,2,6v12c0,1.104,0.896,2,2,2h16c1.104,0,2-0.896,2-2V6C22,4.896,21.104,4,20,4z M20,8.7l-8,5.334 L4,8.7V6.297l8,5.333l8-5.333V8.7z" />
+                  </svg>
+                </span>
+                <span class="ml-3">
+                  laboratorioDent@gmail.com
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="w-full lg:w-1/6 mt-8 lg:mt-0 lg:mx-4">
+          <p class="text-sm text-gray-400 mt-12">© 2025 Laboratorio CeramicaDent. <br class="hidden lg:block">All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script type="module" src="/js/file01.js"></script>
+</body>
+
 </html>
