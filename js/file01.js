@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     // Usamos la API de timeapi.io para obtener la hora de Santiago, Chile
-    const resp = await fetch('https://timeapi.io/api/Time/current/zone?timeZone=America/Guayaquil');
+    const resp = await fetch('');
     const data = await resp.json();
     const hora = data.hour; // La API devuelve la hora directamente
 
