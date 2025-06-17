@@ -7,68 +7,6 @@ import { saveReserva } from './firebase.js';
 
 
 
-
-const showVideo = () => {
-    const demo = document.getElementById("demo");
-    if (demo) {
-        demo.addEventListener("click", () => {
-            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
-        });
-    }
-    
-}
-
-const displayVotes = async () => {
-    const resultsContainer = document.getElementById('results');
-    if (!resultsContainer) return;
-
-    // Obtener los votos usando la función getVotes
-    const result = await getVotes();
-
-    if (!result.success || !result.body) {
-        resultsContainer.innerHTML = "<p class='text-red-600'>No se pudieron cargar los votos.</p>";
-        return;
-    }
-
-    // Contar votos por producto
-    const votos = result.body;
-    const conteo = {};
-
-    Object.values(votos).forEach(voto => {
-        if (voto.productID) {
-            conteo[voto.productID] = (conteo[voto.productID] || 0) + 1;
-        }
-    });
-
-    // Crear la tabla
-    let tabla = `
-        <table class="min-w-full bg-white border border-gray-300 rounded-lg">
-            <thead>
-                <tr>
-                    <th class="py-2 px-4 border-b">Producto</th>
-                    <th class="py-2 px-4 border-b">Total de votos</th>
-                </tr>
-            </thead>
-            <tbody>
-    `;
-
-    Object.entries(conteo).forEach(([producto, total]) => {
-        tabla += `
-            <tr>
-                <td class="py-2 px-4 border-b">${producto}</td>
-                <td class="py-2 px-4 border-b text-center">${total}</td>
-            </tr>
-        `;
-    });
-
-    tabla += `
-            </tbody>
-        </table>
-    `;
-
-    resultsContainer.innerHTML = tabla;
-};
-
 const enableForm = () => {
     const form = document.getElementById('form_voting');
     if (!form) return;
@@ -156,54 +94,13 @@ function displayContentReserva({ email, mensaje, especificaciones, horario, serv
 
 // Invoca las funciones en la autoejecución
 (() => {
-    showVideo();
     enableForm();
-    displayVotes();
+
     handleReservaForm();
 })();
-let renderCards = (data) => {
-    const container = document.getElementById("skeleton-container");
-    if (!container) return;
 
-    // Limpiar el contenedor antes de renderizar nuevas tarjetas
-    container.innerHTML = "";
 
-    data.slice(0, 3).forEach(item => {
-        const card = `
-            <div class="bg-white rounded-lg shadow-md border border-gray-200 p-6 mb-6">
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">${item.title}</h3>
-                <p class="text-gray-700 mb-1"><span class="font-medium">Autor:</span> ${item.author}</p>
-                <p class="text-gray-700 mb-1"><span class="font-medium">Género:</span> ${item.genre}</p>
-                <p class="text-gray-600 mt-2">${item.content}</p>
-            </div>
-        `;
-        container.innerHTML += card;
-    });
-};
 
-let loadData = async () => {
-    const url = 'https://fakerapi.it/api/v2/texts?_quantity=10&_characters=120';
-
-    try {
-        const result = await fetchFakerData(url);
-
-        if (result.success) {
-            console.log('Datos obtenidos con éxito:', result.body);
-            renderCards(result.body.data);
-        } else {
-            console.error('Error al obtener los datos:', result.error);
-        }
-
-    } catch (error) {
-
-        console.error('Ocurrió un error inesperado:', error);
-
-    }
-};
-(() => {
-    loadData();
-    
-})();
 
 /*
 document.addEventListener('DOMContentLoaded', () => {
